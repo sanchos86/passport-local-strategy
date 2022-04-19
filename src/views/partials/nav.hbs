@@ -1,0 +1,17 @@
+<div style="display: flex; margin-bottom: 16px;">
+    <div>
+        {{#if isLoggedIn}}
+            <a href="/profile">Profile</a>
+        {{else}}
+            <a href="/auth/login">Login</a> |
+            <a href="/auth/register">Registration</a>
+        {{/if}}
+    </div>
+    {{#if isLoggedIn}}
+        <div style="margin-left: 16px;">
+            <form action="/auth/logout" method="post">
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+    {{/if}}
+</div>
